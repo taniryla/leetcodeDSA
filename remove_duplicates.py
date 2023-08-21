@@ -1,6 +1,13 @@
 class Solution:
     def removeDuplicates(self, nums):
-        pass
+        # iterate through the list and compare each interative value of i
+        k = 1 # two pointers
+        for i in range(1, len(nums)):
+            if nums[i] != nums[i - 1]:
+                nums[k] == nums[i]
+                k += 1
+        print(k, nums)
+        return k
 
 
 """
@@ -8,12 +15,12 @@ class Solution:
 Remember the acronym UPS check
 
 Step One (Understand). We have to understand the problem.
-1. What is the unknown?
-2. What are the data inputs?
-3. Can you restate the problem in your own words?
-4. Can the unknown be determined from the data inputs?
-5. Is the data inputs sufficient to determine the unknown? Insufficient? Redundant? Contradictory? 
-6. How should I label important pieces of data input that are a part of the problem?
+1. What is the unknown? remove the duplicates
+2. What are the data inputs? integer list nums sorted in non-decreasing order
+3. Can you restate the problem in your own words?n each unique item should appear only once
+4. Can the unknown be determined from the data inputs? yes
+5. Is the data inputs sufficient to determine the unknown? yes Insufficient? Redundant? Contradictory? 
+6. How should I label important pieces of data input that are a part of the problem? nums, k
 7. Draw a figure. Introduce suitable notation.
 
 Step Two (Plan). Come up with concrete examples to help you understand the problem better. Find a connection between the data inputs and the unknown. You may be obliged to consider auxiliary problems if an immediate connection cannot be found. 
